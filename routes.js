@@ -27,7 +27,8 @@ router.get('/:name', function(req, res) {
 
 router.patch('/:name', function(req, res) {
 
-  let pathName = req._parsedUrl.path.slice(1);
+  let pathName = req.params.name
+  // let pathName = req._parsedUrl.path.slice(1);
   let patchItem;
   for (let item of items) {
     if (item.name === pathName) {
